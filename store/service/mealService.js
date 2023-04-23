@@ -1,0 +1,1 @@
+// api axios veri cekme burada yapılacak
