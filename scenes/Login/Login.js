@@ -8,14 +8,20 @@ import {
 import Button from "../../components/UI/Button/Button";
 import Container from "../../components/UI/Container/Container";
 import Input from "../../components/UI/TextInput/Input";
+// import { useAuth } from "../../hooks/useAuth";
+import { auth } from "../../config/firebase";
 
 
 const Login = ({ navigation }) => {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
+  const [password, setPassword] = useState(""); 
+  // const {user} = useAuth()
+  // console.log(user)
   const handleLogin = () => {
-    navigation.navigate("HomeNavigator")
+    auth.signInWithEmailAndPassword(email,password).then((user)=> {
+      alert("Hosgeldiniz", user.user.email)
+      navigation.navigate("HomeNavigator")
+    }).catch(err => console.log(err))
   };
 
   const onSignupHandler = () => {

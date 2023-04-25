@@ -8,17 +8,12 @@ import {
   createNavigationContainerRef,
 } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { useDispatch } from "react-redux";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { useEffect } from "react";
-import { checkSavedMeals } from "../store/reducers/mealReducer";
 import CategoryDetail from "../scenes/CategoryDetail/CategoryDetail";
 
 export const globalNavigation = createNavigationContainerRef();
 const Stack = createNativeStackNavigator();
 
 export default Navigation = ({ theme }) => {
-  
   return (
     <NavigationContainer ref={globalNavigation} theme={theme}>
       <Stack.Navigator>
@@ -37,9 +32,6 @@ export default Navigation = ({ theme }) => {
           }}
           name="HomeNavigator"
           component={HomeNavigator}
-          // sharedElements={(route) => {
-          //   return [route.params.meal_id];
-          // }}
         />
         <Stack.Screen
           name="MealDetail"
@@ -47,14 +39,8 @@ export default Navigation = ({ theme }) => {
           options={{
             headerShown: true,
           }}
-          // sharedElements={(route) => {
-          //   return [route.params.meal_id];
-          // }}
         />
-        <Stack.Screen 
-        name = "CategoryDetail"
-        component = {CategoryDetail}
-        />
+        <Stack.Screen name="CategoryDetail" component={CategoryDetail} />
       </Stack.Navigator>
     </NavigationContainer>
   );

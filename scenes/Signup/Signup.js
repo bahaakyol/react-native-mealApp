@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { View, Text, StyleSheet } from "react-native";
 import Button from "../../components/UI/Button/Button";
 import Input from "../../components/UI/TextInput/Input";
+import { auth } from "../../config/firebase"; 
 
 
 const Signup = ({navigation}) => {
@@ -13,7 +14,15 @@ const Signup = ({navigation}) => {
   const [isChecked, setIsChecked] = useState(false);
 
   const onPressHandler = ( ) => {
-    navigation.navigate("HomeNavigator")
+    auth.createUserWithEmailAndPassword(email,password).then((response)=> {
+      alert(response.user.email)
+      response.user.updateProfile({
+        displayName : name ,
+        photoURL : "https://avatars.steamstatic.com/f2c80166a0aafda50418f306720ad1b7a9086759_full.jpg"
+      })
+    }).catch(err => console.log(err))
+    
+    // navigation.navigate("HomeNavigator")
   }
 
   return (

@@ -4,7 +4,10 @@ import SearchScreen from "../Search/Search";
 import SavedScreen from "../Saved/Saved";
 import RandomScreen from "../Random/Random";
 import HomeScreen from "../Home/Home";
+import ProfileScreen from "../ProfileScreen/ProfileScreen";
 import { FontAwesome } from "@expo/vector-icons";
+import { Feather } from '@expo/vector-icons'; 
+
 
 const HomeNavigator = (props) => {
   const Tab = createBottomTabNavigator();
@@ -54,6 +57,17 @@ const HomeNavigator = (props) => {
           }}
           name="Random"
           component={RandomScreen}
+        />
+        <Tab.Screen 
+        options = {{
+          headerShown : false,
+          tabBarlabel : "Profile",
+          tabBarIcon : ({color, size}) => (
+            <Feather name="user" size={size} color={color} />
+          )
+        }}
+        name = "Profile"
+        component = {ProfileScreen}
         />
       </Tab.Navigator>
   );
