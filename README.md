@@ -9,7 +9,7 @@ Save your favorite meals and search by their name or find them from their catego
 Features
 ---
 
-* Data Fetching 
+* Prop Drilling 
 * Navigation (Main and Bottom Stack)
 * Redux
 * API 
