@@ -20,12 +20,12 @@ Features
 
 ---
 
-![](./assets/readme/1.png =400x800)
-![](./assets/readme/2.png =400x800)
-![](./assets/readme/3.png =400x800)
-![](./assets/readme/4.png =400x800)
-![](./assets/readme/5.png =400x800)
-![](./assets/readme/6.png =400x800)
-![](./assets/readme/7.png =400x800)
-![](./assets/readme/8.png =400x800)
-![](./assets/readme/9.png =400x800)
+![](./assets/readme/1.png)
+![](./assets/readme/2.png)
+![](./assets/readme/3.png)
+![](./assets/readme/4.png)
+![](./assets/readme/5.png)
+![](./assets/readme/6.png)
+![](./assets/readme/7.png)
+![](./assets/readme/8.png)
+![](./assets/readme/9.png)
