@@ -26,7 +26,7 @@ const ProfileScreen = () => {
           />
           
         </View>
-        <Text style={styles.title}>{auth.currentUser.displayName}</Text>
+        <Text style={[styles.title, {color : theme.colors.text}]}>{auth.currentUser.displayName}</Text>
             <View style = {styles.menuContainer}>
             <View style = {[styles.section, {backgroundColor : theme.colors.card}]}>
               <Text style = {{color : theme.colors.text}}>email Address: {auth.currentUser.email} </Text>
